@@ -1,0 +1,21 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'poppins', sans-serif;
+    background-color: #FDF7F2;
+    overflow-x: hidden;
+}
+
+/* Nav */
+.logo {
+    font-family: 'Roboto Slab', serif;
+    color: white !important;
+}
+
+
+/* login-page */
+.card {
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
