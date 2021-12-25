@@ -25,15 +25,15 @@
         <h1 class="display-4 pt-0">Daftar Peminjam Buku</h1>
         <?php if ($this->session->flashdata('pesan') == 'Ditambah') { ?>
             <div class="alert alert-success" role="alert">
-                Data berhasil ditambah!
+                A New Data Successfully Added!
             </div>
         <?php } elseif ($this->session->flashdata('pesan') == 'Diubah') { ?>
             <div class="alert alert-success" role="alert">
-                Data berhasil diubah!
+                A New Data Successfully Changed!
             </div>
         <?php } elseif ($this->session->flashdata('pesan') == 'Dihapus') { ?>
             <div class="alert alert-success" role="alert">
-                Data berhasil dihapus!
+                A New Data Successfully Deleted!
             </div>
         <?php } ?>
     </div>

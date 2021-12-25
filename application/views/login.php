@@ -10,11 +10,11 @@
                             <p class="text-center small">Enter your username & password to login</p>
                             <?php if ($this->session->flashdata('wrong_password')) { ?>
                                 <div class="alert alert-danger" role="alert">
-                                    Username atau Password Salah!
+                                    Wrong Password or Username!
                                 </div>
                             <?php } elseif ($this->session->flashdata('haveto_login')) { ?>
                                 <div class="alert alert-danger" role="alert">
-                                    Anda belum melakukan login!
+                                    You Have to Login First!
                                 </div>
                             <?php } ?>
                         </div>
