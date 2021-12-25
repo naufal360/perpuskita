@@ -10,7 +10,7 @@
                             <p class="text-center small">Enter your username & password to login</p>
                             <?php if ($this->session->flashdata('wrong_password')) { ?>
                                 <div class="alert alert-danger" role="alert">
-                                    Wrong Password or Username!
+                                    Wrong Username or Password!
                                 </div>
                             <?php } elseif ($this->session->flashdata('haveto_login')) { ?>
                                 <div class="alert alert-danger" role="alert">
