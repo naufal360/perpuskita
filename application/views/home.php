@@ -29,11 +29,11 @@
             </div>
         <?php } elseif ($this->session->flashdata('pesan') == 'Diubah') { ?>
             <div class="alert alert-success" role="alert">
-                A New Data Successfully Changed!
+                A Data Successfully Changed!
             </div>
         <?php } elseif ($this->session->flashdata('pesan') == 'Dihapus') { ?>
             <div class="alert alert-success" role="alert">
-                A New Data Successfully Deleted!
+                A Data Has Been Deleted!
             </div>
         <?php } ?>
     </div>
@@ -75,7 +75,7 @@
                             <a href="<?= base_url('perpuskita/edit/' . $data['id']) ?>" class="align-middle"><img src="<?= base_url('assets/img/edit.png') ?>" style="width: 30px; height: 30px;"></a>
                         </td>
                         <td class="align-middle text-center">
-                            <a href="<?= base_url('perpuskita/remove/' . $data['id']) ?>" onclick="return confirm('Data ini akan dihapus! Anda yakin?')" class="align-middle"><img src="<?= base_url('assets/img/bin.png') ?>" style="width: 30px; height: 30px;"></a>
+                            <a href="<?= base_url('perpuskita/remove/' . $data['id']) ?>" onclick="return confirm('Are you sure want to delete this data?')" class="align-middle"><img src="<?= base_url('assets/img/bin.png') ?>" style="width: 30px; height: 30px;"></a>
                         </td>
                     </tr>
                 <?php } ?>
