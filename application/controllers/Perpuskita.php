@@ -72,23 +72,7 @@ class Perpuskita extends CI_Controller
 			$this->session->set_flashdata('pesan', 'unmatching_password');
 			redirect('perpuskita/signup', 'refresh');
 		} else {
-			$username = $this->input->post('username');
-			$password = $this->input->post('password');
-			$user = $this->db->get_where('user', ['username' => $username])->row_array();
-
-			if ($user) {
-				$this->session->set_flashdata('pesan', 'username_exist');
-				redirect('perpuskita/signup', 'refresh');
-			}
-
-			$data = [
-				'username' => $username,
-				'password' => password_hash($password, PASSWORD_DEFAULT)
-
-			];
-
-			$this->db->insert('user', $data);
-			redirect('perpuskita/login', 'refresh');
+			$this->db_perpuskita->register();
 		}
 	}
 

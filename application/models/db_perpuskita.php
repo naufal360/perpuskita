@@ -14,6 +14,27 @@ class db_perpuskita extends CI_Model
         return $this->db->get('user')->result_array();
     }
 
+    function register()
+    {
+        $username = $this->input->post('username');
+        $password = $this->input->post('password');
+        $user = $this->db->get_where('user', ['username' => $username])->row_array();
+
+        if ($user) {
+            $this->session->set_flashdata('pesan', 'username_exist');
+            redirect('perpuskita/signup', 'refresh');
+        }
+
+        $data = [
+            'username' => $username,
+            'password' => password_hash($password, PASSWORD_DEFAULT)
+
+        ];
+
+        $this->db->insert('user', $data);
+        redirect('perpuskita/login', 'refresh');
+    }
+
     function create()
     {
         $nama_peminjam = $this->input->post('name');
