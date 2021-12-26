@@ -5,7 +5,6 @@ class db_perpuskita extends CI_Model
 {
     function read()
     {
-        $this->db->order_by('nama_peminjam', 'asc');
         return $this->db->get('data_buku')->result_array();
     }
 
